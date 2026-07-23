@@ -1,30 +1,29 @@
-// document.getElementById('unique').style.backgroundColor='blue';
-const unique = document.getElementById('unique');
-unique.style.backgroundColor='black';
-unique.style.color='white';
-
-const btns = document.getElementsByClassName('btn');
+const btns = document.querySelectorAll('button');
 for (const btn of btns) {
-  btn.style.display='block';
-  btn.addEventListener('click', ()=>{
-    btn.style.fontSize='32px'
-  })
+btn.classList.add('btn');
+btn.addEventListener('mouseover', ()=>{
+  btn.classList.add('active')
+})
+btn.addEventListener('mouseout', ()=>{
+  btn.classList.remove('active');
+})
+btn.addEventListener('click', ()=>{
+  btn.classList.toggle('shadow');
+})
 }
+const block = document.getElementById('block');
+block.addEventListener('click', ()=>{
+  block.classList.toggle('big-text');
+})
+const clickbtn =document.querySelector('#block>button');
+const picture =document.querySelector('#block>img');
+clickbtn.addEventListener('click',()=>{
+  picture.classList.toggle('hide');
+  clickbtn.textContent=clickbtn.textContent === 'show picture' ? 'hide picture' : 'show picture';
+})
 
-const h2Block = document.querySelector('#block>h2');
-h2Block.style.color='white';
-const btnsBlock = document.querySelectorAll('#block>.btn');
-btnsBlock.forEach(element => {
-  element.style.backgroundColor='yellow';
-});
-for (const btn of btnsBlock) {
-  btn.style.fontSize='16px';
-}
-const olLis = document.querySelectorAll('#block>ol>li');
-olLis.forEach(element => {
-  element.addEventListener('click', ()=>{
-    element.textContent='wow';
-  })
-});
-document.querySelector('#block>ol>li:last-child').style.backgroundColor='pink';
-document.querySelector('#block>ol>li:first-child').style.backgroundColor='pink';
+const btnTheme = document.querySelector('button:first-of-type');
+btnTheme.addEventListener('click', ()=>{
+  btnTheme.textContent=btnTheme.textContent==='light'?'dark' : 'light';
+  document.body.classList.toggle('dark');
+})

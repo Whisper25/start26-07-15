@@ -1,3 +1,23 @@
-#block>h2{
-  background-color:blueviolet;
+.btn{
+  font-size:20px;
+}
+.active{
+  background-color: pink;
+}
+.shadow{
+  box-shadow: inset 2px 2px black;
+}
+.big-text{
+  font-size: 30px;
+}
+.hide{
+  display: none;
+}
+.dark{
+  background-color:black;
+  color:white;
+}
+button{
+  background-color:inherit;
+  color:inherit;
 }
