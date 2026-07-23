@@ -1,23 +1,27 @@
-.btn{
-  font-size:20px;
+body{
+  background-color:gray;
+}
+.flag{
+  text-align: center;
+  border: 2px solid black;
+  width: 256px;
+  height: 192px;
+  margin: auto;
+  line-height: 192px;
+  border-radius: 7px;
+}
+h1{
+  text-align: center;
+}
+li{
+  display:inline-block;
+  background-color: white;
+  padding: 0.8em;
+  border-radius: 7px;
+}
+ul{
+  text-align: center;
 }
 .active{
-  background-color: pink;
-}
-.shadow{
-  box-shadow: inset 2px 2px black;
-}
-.big-text{
-  font-size: 30px;
-}
-.hide{
-  display: none;
-}
-.dark{
-  background-color:black;
-  color:white;
-}
-button{
-  background-color:inherit;
-  color:inherit;
+  background-color:pink;
 }
